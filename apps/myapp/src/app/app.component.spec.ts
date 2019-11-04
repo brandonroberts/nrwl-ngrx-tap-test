@@ -1,10 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
+import { provideMockStore } from '@ngrx/store/testing';
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent]
+      declarations: [AppComponent],
+      providers: [provideMockStore()]
     }).compileComponents();
   }));
 
@@ -25,7 +28,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain(
-      'Welcome to myapp!'
+      'Effects Tap Test'
     );
   });
 });
