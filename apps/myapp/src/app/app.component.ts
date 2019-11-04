@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { loadApps } from './app.actions';
 
 @Component({
   selector: 'ngrx-tap-test-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myapp';
+
+  constructor(private store: Store<{}>) {}
+
+  loadApps() {
+    this.store.dispatch(loadApps());
+  }
 }
