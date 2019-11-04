@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "ngrxTapTest", "camelCase"],
+    "component-selector": [true, "element", "ngrx-tap-test", "kebab-case"]
+  }
+}
