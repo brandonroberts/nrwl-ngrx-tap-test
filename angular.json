@@ -17,8 +17,13 @@
             "polyfills": "apps/myapp/src/polyfills.ts",
             "tsConfig": "apps/myapp/tsconfig.app.json",
             "aot": false,
-            "assets": ["apps/myapp/src/favicon.ico", "apps/myapp/src/assets"],
-            "styles": ["apps/myapp/src/styles.css"],
+            "assets": [
+              "apps/myapp/src/favicon.ico",
+              "apps/myapp/src/assets"
+            ],
+            "styles": [
+              "apps/myapp/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -77,7 +82,10 @@
               "apps/myapp/tsconfig.app.json",
               "apps/myapp/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/myapp/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/myapp/**"
+            ]
           }
         },
         "test": {
@@ -111,15 +119,20 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/myapp-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/myapp-e2e/**"]
+            "tsConfig": [
+              "apps/myapp-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/myapp-e2e/**"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@ngrx/schematics"
   },
   "schematics": {
     "@nrwl/angular:application": {
