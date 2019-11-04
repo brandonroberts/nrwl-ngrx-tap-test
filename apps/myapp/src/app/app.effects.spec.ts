@@ -46,8 +46,7 @@ describe('AppEffects', () => {
 
     actions$ = of(action);
 
-    effects.loadApps$.subscribe(result => {
-      expect(result).toEqual(action);
+    effects.loadApps$.subscribe(() => {
       expect(appService.doSomething).toHaveBeenCalled();
       done();
     });
