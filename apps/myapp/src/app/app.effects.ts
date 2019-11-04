@@ -13,7 +13,6 @@ export class AppEffects {
 
   loadApps$ = createEffect(() => this.actions$.pipe(
     ofType(AppActions.loadApps),
-    /** An EMPTY observable only emits completion. Replace with your own observable API request */
     tap(() => {
       this.appService.doSomething();
     })
